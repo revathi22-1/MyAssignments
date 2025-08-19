@@ -10,7 +10,7 @@ meaningful examples
  //string
  var mobilename="Oppo"
  console.log(`"I am using ${mobilename}", type : ${typeof mobilename}`)
- 
+
  //number
  let num =9176437183
  console.log(`"My number is ${num}", type : ${typeof num}`)
@@ -28,8 +28,6 @@ meaningful examples
 //Undefined
 let mobilecolour
 console.log(`type: ${typeof mobilecolour}`)
-
-// 
 
 //BigInt
 const val= 123456789n
@@ -79,5 +77,6 @@ if(touchscreen1){
     var mobilebrand2 ="Samsung"
     }
 console.log(mobilebrand2 + "," + typeof(mobilebrand2))
+
 
 

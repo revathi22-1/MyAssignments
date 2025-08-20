@@ -73,7 +73,7 @@ const test = require("node:test")
 
  var mobilebrand1 = "Samsung"
  const touchscreen1=true
-    if(!touchscreen)
+    if(!touchscreen1)
         {
        let mobilebrand1 ="Readmi"
        console.log(mobilebrand1 + "," + typeof(mobilebrand1))
@@ -88,11 +88,12 @@ const test = require("node:test")
  */
  var mobilebrand2 = "Readmi"
  var touchscreen2 =true
-    if(touchscreen1)
+    if(touchscreen2)
         {
     var mobilebrand2 ="Samsung"
         }
  console.log(mobilebrand2 + "," + typeof(mobilebrand2))
+
 
 
 

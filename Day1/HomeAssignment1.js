@@ -7,6 +7,8 @@
 meaningful examples
 */
 
+const test = require("node:test")
+
  //variables for each primitive data type printing their value and their Datatype//
  //string
   var mobilename="Oppo"
@@ -62,17 +64,23 @@ meaningful examples
        let mobilebrand ="Readmi"
        console.log(mobilebrand + "," + typeof(mobilebrand))
         }
+    else{
+        console.log(mobilebrand + "," + typeof(mobilebrand))
+        }
 
-//Scope testing  var  global scoping 
-//The below code print the outputs outside the scope and also the value and datatype.
+//Scope testing  var  global/function level scoping
+//The below code print the outputs function level scope of var variable and also the value and datatype.
 
  var mobilebrand1 = "Samsung"
  const touchscreen1=true
-    if(touchscreen)
+    if(!touchscreen)
         {
        let mobilebrand1 ="Readmi"
+       console.log(mobilebrand1 + "," + typeof(mobilebrand1))
         }
- console.log(mobilebrand1 + "," + typeof(mobilebrand1))
+    else{
+         console.log(mobilebrand1 + "," + typeof(mobilebrand1))
+        }
 
 /* The below example is for var where it can be redeclared and reassigned.
    In The below code  mobilebrand1 is redeclared and redefined and the output will be the new value assigned to it.
@@ -85,6 +93,9 @@ meaningful examples
     var mobilebrand2 ="Samsung"
         }
  console.log(mobilebrand2 + "," + typeof(mobilebrand2))
+
+
+
 
 
 

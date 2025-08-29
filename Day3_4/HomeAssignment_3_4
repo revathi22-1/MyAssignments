@@ -1,1 +1,107 @@
+/*
+  Name        : HomeAssignment3.js
+  Author      : Revathi Nair
+  Created     : 26-08-2025
+  Description : Learn how to manipulate strings and use looping statements in a programming language to solve practical 
+problems.
+*/
 
+//Excecise 1 : Given a string s consisting of words and spaces, return the length of the last word in the string.
+//Example 1
+let s1="Hello World"
+let splitstring=s1.substring(5,11)
+console.log(splitstring)
+let length1=splitstring.length
+console.log(`The last word is "World" with length ${length1}.`)
+
+
+//Example 2
+let s3="   fly me   to   the moon  "
+let trimstring=s3.trim()
+let splittrimmedstring=trimstring.split('')
+let slicesplitstring=splittrimmedstring.slice(18,25)
+let length2=slicesplitstring.length
+console.log(`The last word is "moon" with length ${length2}`)
+
+//Example 3 Write a function to check if two strings are anagrams. 
+//  Input: isAnagram('listen', 'silent') 
+//  Output: true 
+//  Input: isAnagram('hello', 'world')  
+//  Output: false 
+//  Explanation: An anagram is when you mix up the letters of a word to make a new one, using all the letters.
+function isAnagram(str1,str2)
+{
+    str1 = str1.toUpperCase()
+    console.log(str1)
+    str2 = str2.toUpperCase()
+    console.log(str2)
+      if(str1.split('').sort().join() ==str2.split('').sort().join())
+      {
+      console.log(`True!!! The string ${str1} and ${str2} are Anagram`)
+      }
+    else{
+    console.log(` False!!! The string ${str1} and ${str2} are  not Anagram`)
+    }
+    }
+// function call
+isAnagram("silent","listen")
+isAnagram("hello","world")
+isAnagram("orwld","world")
+
+
+//Exercise to find occurance-Array
+
+/*Description : Learn to implement a function in JavaScript that calculates and prints the cumulative sum of numbers from 1 
+to a given `n`. */
+
+ function sumcumulative(n)
+ {
+ let sum = 0
+  for (let i = 1; i <= n; i++)
+  {
+    sum += i
+  }
+  console.log(`The cumulative sum of numbers from 1 to a given 'n' is ${sum}`)
+}
+sumcumulative(35)
+
+//Exercise to find occurance-Array
+
+// Description : Learn how to count the occurrences of a specific element in an array using JavaScript. //
+const arr =  [2,4,5,2,1,2]
+const target = 2;
+let res = 0;
+  for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] === target)
+            res++;
+    }
+  console.log(`The count of occurance of a specific element is" ${res}`)
+
+  //Exercise to find Array Intersection Calculation
+/*Understand and apply basic programming constructs in TypeScript to compute the intersection of 
+two arrays. */
+
+
+let arr1 = [1, 3, 5, 7, 9];
+let arr2 = [2, 3, 4, 5, 6, 9];
+
+let arr3 = [1,"Rose","Jasmine",7,8,10];
+let arr4 = [2, 3,"Rose",5,,];
+
+let arre=[]
+
+let res_arr = (arr1, arr2) => {
+    let new_array = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                new_array.push(arr1[i]);
+            }
+        }
+    }
+    return new_array;
+};
+console.log(`Intersection of Array obtained with same datatype : ${res_arr(arr1, arr2)}`)
+console.log(`Intersection of Array obtained with different datatype : ${res_arr(arr3, arr4)}`)
+console.log(`Intersection of Array obtained with empty value is : ${res_arr(arr1, arre)}`)
